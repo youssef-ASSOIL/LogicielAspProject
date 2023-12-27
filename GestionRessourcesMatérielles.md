@@ -1,5 +1,3 @@
-Bien sûr, pour approfondir les détails du projet de gestion des ressources matérielles, voici une expansion sur certaines fonctionnalités clés :
-
 1. **Identification et Authentification :**
    - Utilisation d'une double authentification (nom d'utilisateur/mot de passe et éventuellement un code à usage unique) pour renforcer la sécurité.
    - Gestion des sessions pour garantir une connexion sécurisée et un accès approprié.
