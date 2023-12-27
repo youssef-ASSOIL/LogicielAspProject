@@ -30,4 +30,3 @@
    - Gestion fine des autorisations pour chaque type d'utilisateur afin de garantir l'accès uniquement aux informations nécessaires.
    - Journal d'audit enregistrant les activités sensibles pour la conformité et l'analyse de la sécurité.
 
-En adoptant ces fonctionnalités supplémentaires, le système sera plus complet et répondra plus efficacement aux besoins spécifiques de la gestion des ressources matérielles dans le contexte de la faculté.
