@@ -30,3 +30,182 @@
    - Gestion fine des autorisations pour chaque type d'utilisateur afin de garantir l'accès uniquement aux informations nécessaires.
    - Journal d'audit enregistrant les activités sensibles pour la conformité et l'analyse de la sécurité.
 
+------------------------------------------------------------------------------------------------
+
+### Acteurs Principaux :
+
+1. **Responsable des Ressources :**
+   - Affecte les codes uniques aux ressources.
+   - Gère l'affectation des ressources aux départements.
+   - Supervise les appels d'offres et la sélection des fournisseurs.
+   - Reçoit les rapports de maintenance et prend des décisions en conséquence.
+
+2. **Chef de Département :**
+   - Soumet les besoins en ressources pour son département.
+   - Consulte le suivi de sa demande.
+   - Participe à la sélection des fournisseurs lors des appels d'offres.
+
+3. **Service de Maintenance :**
+   - Reçoit les rapports de pannes des départements.
+   - Intervient pour résoudre les problèmes signalés.
+   - Communique avec le responsable des ressources sur les interventions nécessaires.
+
+4. **Fournisseur :**
+   - Soumet des offres en réponse aux appels d'offres.
+   - Livre les ressources après la sélection de l'offre.
+
+5. **Enseignant/Administratif :**
+   - Reçoit les ressources affectées par le responsable des ressources.
+   - Signale les pannes et communique avec le service de maintenance.
+-------------------------------------------------------------------------------------------
+# 1.Utilisateur :
+## *ID, Nom, Prénom, Adresse Email, Mot de passe, Rôle.*
+
+# 2.Ressource : 
+## *Code unique, Date de livraison, Durée de garantie, Fournisseur.*
+### Méthodes : Ajouter, Modifier, Supprimer.
+## 2.1.Ordinateur (sous-classe de Ressource) :
+### *Marque, CPU, RAM, Disque Dur, Écran.*
+## 2.2.Imprimante (sous-classe de Ressource) :
+### *Vitesse d'impression, Résolution.*
+
+# 3.Fournisseur :
+## *Nom de la société, Lieu, Adresse Email, Gérant.*
+### Méthodes : Ajouter, Modifier, Supprimer.
+
+# 4.Département :
+
+## *Nom du département.*
+# 5.Personne :
+
+## *Nom, Prénom, Type (Enseignant/Administratif).*
+# 6.Affectation :
+
+## * Ressource, Personne, Département.*
+# 6.Panne :
+
+## *Explication, Date d'apparition, Fréquence, Ordre (logiciel/matériel).*
+# 7.Appel d'Offre :
+
+## * Chef de Département, Liste des besoins, Fournisseur sélectionné, État.*
+# 8.Notification :
+
+## *Destinataire, Contenu, Date.*
+# 9.Cycle de Vie du Logiciel :
+
+## * Phase, Description, Date de début, Date de fin, Responsable.*
+# 10.Journal d'Audit :
+
+## *Utilisateur, Action, Date, Heure.*
+
+---------------------------------------------------------------------------
+# Modèle de Données
+
+## Utilisateur
+
+- **Attributs**: 
+  - ID
+  - Nom
+  - Prénom
+  - Adresse Email
+  - Mot de passe
+  - Rôle
+
+## Ressource
+
+- **Attributs**:
+  - Code unique
+  - Date de livraison
+  - Durée de garantie
+  - Fournisseur
+- **Méthodes**:
+  - Ajouter
+  - Modifier
+  - Supprimer
+
+## Ordinateur (sous-classe de Ressource)
+
+- **Attributs**:
+  - Marque
+  - CPU
+  - RAM
+  - Disque Dur
+  - Écran
+
+## Imprimante (sous-classe de Ressource)
+
+- **Attributs**:
+  - Vitesse d'impression
+  - Résolution
+
+## Fournisseur
+
+- **Attributs**:
+  - Nom de la société
+  - Lieu
+  - Adresse Email
+  - Gérant
+- **Méthodes**:
+  - Ajouter
+  - Modifier
+  - Supprimer
+
+## Département
+
+- **Attributs**:
+  - Nom du département
+
+## Personne
+
+- **Attributs**:
+  - Nom
+  - Prénom
+  - Type (Enseignant/Administratif)
+
+## Affectation
+
+- **Attributs**:
+  - Ressource
+  - Personne
+  - Département
+
+## Panne
+
+- **Attributs**:
+  - Explication
+  - Date d'apparition
+  - Fréquence
+  - Ordre (logiciel/matériel)
+
+## Appel d'Offre
+
+- **Attributs**:
+  - Chef de Département
+  - Liste des besoins
+  - Fournisseur sélectionné
+  - État
+
+## Notification
+
+- **Attributs**:
+  - Destinataire
+  - Contenu
+  - Date
+
+## Cycle de Vie du Logiciel
+
+- **Attributs**:
+  - Phase
+  - Description
+  - Date de début
+  - Date de fin
+  - Responsable
+
+## Journal d'Audit
+
+- **Attributs**:
+  - Utilisateur
+  - Action
+  - Date
+  - Heure
+
