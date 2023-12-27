@@ -58,154 +58,82 @@
    - Reçoit les ressources affectées par le responsable des ressources.
    - Signale les pannes et communique avec le service de maintenance.
 -------------------------------------------------------------------------------------------
-# 1.Utilisateur :
-## *ID, Nom, Prénom, Adresse Email, Mot de passe, Rôle.*
 
-# 2.Ressource : 
-## *Code unique, Date de livraison, Durée de garantie, Fournisseur.*
-### Méthodes : Ajouter, Modifier, Supprimer.
-## 2.1.Ordinateur (sous-classe de Ressource) :
-### *Marque, CPU, RAM, Disque Dur, Écran.*
-## 2.2.Imprimante (sous-classe de Ressource) :
-### *Vitesse d'impression, Résolution.*
-
-# 3.Fournisseur :
-## *Nom de la société, Lieu, Adresse Email, Gérant.*
-### Méthodes : Ajouter, Modifier, Supprimer.
-
-# 4.Département :
-
-## *Nom du département.*
-# 5.Personne :
-
-## *Nom, Prénom, Type (Enseignant/Administratif).*
-# 6.Affectation :
-
-## * Ressource, Personne, Département.*
-# 6.Panne :
-
-## *Explication, Date d'apparition, Fréquence, Ordre (logiciel/matériel).*
-# 7.Appel d'Offre :
-
-## * Chef de Département, Liste des besoins, Fournisseur sélectionné, État.*
-# 8.Notification :
-
-## *Destinataire, Contenu, Date.*
-# 9.Cycle de Vie du Logiciel :
-
-## * Phase, Description, Date de début, Date de fin, Responsable.*
-# 10.Journal d'Audit :
-
-## *Utilisateur, Action, Date, Heure.*
-
----------------------------------------------------------------------------
 # Modèle de Données
 
-## Utilisateur
+# 1. Utilisateur:
+- ID
+- Nom
+- Prénom
+- Adresse Email
+- Mot de passe
+- Rôle
 
-- **Attributs**: 
-  - ID
-  - Nom
-  - Prénom
-  - Adresse Email
-  - Mot de passe
-  - Rôle
+# 2. Ressource:
+- Code unique
+- Date de livraison
+- Durée de garantie
+- Fournisseur
+  - Méthodes : Ajouter, Modifier, Supprimer
 
-## Ressource
-
-- **Attributs**:
-  - Code unique
-  - Date de livraison
-  - Durée de garantie
-  - Fournisseur
-- **Méthodes**:
-  - Ajouter
-  - Modifier
-  - Supprimer
-
-## Ordinateur (sous-classe de Ressource)
-
-- **Attributs**:
+  ## 2.1. Ordinateur (sous-classe de Ressource):
   - Marque
   - CPU
   - RAM
   - Disque Dur
   - Écran
 
-## Imprimante (sous-classe de Ressource)
-
-- **Attributs**:
+  ## 2.2. Imprimante (sous-classe de Ressource):
   - Vitesse d'impression
   - Résolution
 
-## Fournisseur
+# 3. Fournisseur:
+- Nom de la société
+- Lieu
+- Adresse Email
+- Gérant
+  - Méthodes : Ajouter, Modifier, Supprimer
 
-- **Attributs**:
-  - Nom de la société
-  - Lieu
-  - Adresse Email
-  - Gérant
-- **Méthodes**:
-  - Ajouter
-  - Modifier
-  - Supprimer
+# 4. Département:
+- Nom du département
 
-## Département
+# 5. Personne:
+- Nom
+- Prénom
+- Type (Enseignant/Administratif)
 
-- **Attributs**:
-  - Nom du département
+# 6. Affectation:
+- Ressource
+- Personne
+- Département
 
-## Personne
+# 7. Panne:
+- Explication
+- Date d'apparition
+- Fréquence
+- Ordre (logiciel/matériel)
 
-- **Attributs**:
-  - Nom
-  - Prénom
-  - Type (Enseignant/Administratif)
+# 8. Appel d'Offre:
+- Chef de Département
+- Liste des besoins
+- Fournisseur sélectionné
+- État
 
-## Affectation
+# 9. Notification:
+- Destinataire
+- Contenu
+- Date
 
-- **Attributs**:
-  - Ressource
-  - Personne
-  - Département
+# 10. Cycle de Vie du Logiciel:
+- Phase
+- Description
+- Date de début
+- Date de fin
+- Responsable
 
-## Panne
-
-- **Attributs**:
-  - Explication
-  - Date d'apparition
-  - Fréquence
-  - Ordre (logiciel/matériel)
-
-## Appel d'Offre
-
-- **Attributs**:
-  - Chef de Département
-  - Liste des besoins
-  - Fournisseur sélectionné
-  - État
-
-## Notification
-
-- **Attributs**:
-  - Destinataire
-  - Contenu
-  - Date
-
-## Cycle de Vie du Logiciel
-
-- **Attributs**:
-  - Phase
-  - Description
-  - Date de début
-  - Date de fin
-  - Responsable
-
-## Journal d'Audit
-
-- **Attributs**:
-  - Utilisateur
-  - Action
-  - Date
-  - Heure
+# 11. Journal d'Audit:
+- Utilisateur
+- Action
+- Date
+- Heure
 
