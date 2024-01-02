@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace LogicielAspProject.Controllers
 {
+    //from Joseph TeST Code !!
     public class HomeController : Controller
     {
         public ActionResult Index()
