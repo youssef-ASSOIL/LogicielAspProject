@@ -180,3 +180,67 @@
 
 12. **Génération de Rapports :**
     - Le système génère des rapports périodiques sur l'état des ressources, les pannes, les évaluations des fournisseurs, etc.
+    
+------------------------------------------------------------------------------------------------------------------------------------------------
+# Diagramme des Exigences
+
+## Exigences Fonctionnelles :
+
+1. **Authentification et Autorisation :**
+   - Les utilisateurs doivent s'authentifier avant d'accéder au système.
+   - Les rôles d'accès (responsable des ressources, chef de département, service de maintenance, fournisseur, enseignant/administratif) doivent être définis avec des autorisations appropriées.
+
+2. **Gestion des Ressources Matérielles :**
+   - Création, modification et suppression des ressources par le responsable des ressources.
+   - Affectation des ressources à des départements ou utilisateurs spécifiques.
+   - Suivi des mouvements de stock et historique des ressources.
+
+3. **Maintenance :**
+   - Signalement des pannes par les utilisateurs.
+   - Intervention du service de maintenance pour résoudre les pannes.
+   - Notification automatique au responsable des ressources et au fournisseur en cas de défaut matériel sous garantie.
+
+4. **Gestion des Appels d'Offre :**
+   - Soumission des besoins par les chefs de département.
+   - Lancement d'appels d'offres par le responsable des ressources.
+   - Sélection du fournisseur le moins disant.
+
+5. **Communication :**
+   - Messagerie interne pour la communication entre les acteurs.
+   - Notifications automatiques pour les événements critiques (pannes, nouvelles ressources, résultats d'appels d'offres).
+
+## Exigences Non Fonctionnelles :
+
+1. **Sécurité :**
+   - Chiffrement des données sensibles et sécurisation des communications.
+   - Journal d'audit pour enregistrer les activités sensibles.
+
+2. **Performance :**
+   - Temps de réponse du système acceptable même en période de charge.
+   - Gestion efficace de la base de données pour garantir la rapidité des opérations.
+
+3. **Convivialité :**
+   - Interface utilisateur intuitive pour faciliter la navigation.
+   - Formation minimale requise pour les utilisateurs.
+
+4. **Extensibilité :**
+   - Capacité à ajouter de nouveaux types de ressources ou de nouveaux rôles d'utilisateurs.
+   - Possibilité d'ajouter des fonctionnalités supplémentaires à l'avenir.
+
+5. **Interopérabilité :**
+   - Intégration avec d'autres systèmes si nécessaire (par exemple, gestion des ressources humaines).
+
+## Contraintes Techniques :
+
+1. **Technologies Utilisées :**
+   - Langage de programmation (par exemple, Java, Python).
+   - Système de gestion de base de données (par exemple, MySQL, MongoDB).
+   - Frameworks et bibliothèques spécifiques.
+
+2. **Environnement Opérationnel :**
+   - Le système doit fonctionner sur les navigateurs web courants.
+   - Prise en charge des systèmes d'exploitation spécifiques (Windows, Linux, etc.).
+
+3. **Maintenance et Support :**
+   - Mécanismes de sauvegarde réguliers pour la récupération des données.
+   - Support technique disponible en cas de problèmes.
