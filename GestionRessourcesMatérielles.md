@@ -244,3 +244,187 @@
 3. **Maintenance et Support :**
    - Mécanismes de sauvegarde réguliers pour la récupération des données.
    - Support technique disponible en cas de problèmes.
+----------------------------------------------------------------------------------------------------------------------
+# Diagramme des Exigences avec Cas d'Utilisation
+
+## Cas d'Utilisation : Gestion des Ressources
+
+1. **Authentification :**
+   - *Acteur Principal :* Utilisateur
+   - L'utilisateur se connecte au système en utilisant ses identifiants.
+
+2. **Gestion des Ressources :**
+   - *Acteur Principal :* Responsable des Ressources
+   - Le responsable des ressources peut créer, modifier, et supprimer des ressources.
+   - Il peut affecter des ressources à des départements ou à des utilisateurs spécifiques.
+
+3. **Affectation des Ressources :**
+   - *Acteur Principal :* Responsable des Ressources
+   - Le responsable des ressources peut attribuer des ressources spécifiques à des départements ou à des utilisateurs individuels.
+
+## Cas d'Utilisation : Maintenance
+
+4. **Signalement de Panne :**
+   - *Acteur Principal :* Utilisateur (Enseignant/Administratif)
+   - Les utilisateurs peuvent signaler une panne dans une ressource.
+
+5. **Intervention de Maintenance :**
+   - *Acteur Principal :* Service de Maintenance
+   - Le service de maintenance intervient pour résoudre les problèmes signalés.
+
+## Cas d'Utilisation : Gestion des Appels d'Offre
+
+6. **Soumission des Besoins :**
+   - *Acteur Principal :* Chef de Département
+   - Le chef de département soumet les besoins en ressources pour son département.
+
+7. **Lancement d'Appels d'Offre :**
+   - *Acteur Principal :* Responsable des Ressources
+   - Le responsable des ressources lance un appel d'offres en utilisant les besoins collectés.
+
+8. **Sélection du Fournisseur :**
+   - *Acteur Principal :* Responsable des Ressources
+   - Le responsable des ressources évalue les soumissions et sélectionne le fournisseur le moins disant.
+
+## Cas d'Utilisation : Communication
+
+9. **Messagerie Interne :**
+   - *Acteurs Principaux :* Tous les Utilisateurs
+   - Les utilisateurs peuvent communiquer via une messagerie interne.
+
+10. **Notifications Automatiques :**
+    - *Acteurs Principaux :* Responsable des Ressources, Service de Maintenance
+    - Les notifications automatiques sont envoyées pour les événements critiques (pannes, nouvelles ressources, résultats d'appels d'offres).
+---------------------------------------------------------------------------------------------------------
+# Diagramme de Déploiement
+
+## Composants Matériels :
+
+1. **Serveur Web :**
+   - *Description :* Héberge l'application web pour la gestion des ressources.
+   - *Caractéristiques :* Processeur X, RAM Y, Stockage Z.
+
+2. **Base de Données :**
+   - *Description :* Stocke les données relatives aux ressources, utilisateurs, pannes, etc.
+   - *Caractéristiques :* Type de base de données (par exemple, MySQL), Capacité de stockage.
+
+3. **Dispositifs d'Accès :**
+   - *Description :* Ordinateurs, tablettes, ou tout dispositif avec un navigateur web permettant l'accès à l'application.
+
+4. **Équipements Matériels :**
+   - *Description :* Ordinateurs, imprimantes, et autres ressources physiques gérées par le système.
+   - *Caractéristiques :* Marque, Modèle, Configuration.
+
+## Composants Logiciels :
+
+5. **Application Web :**
+   - *Description :* Interface utilisateur pour la gestion des ressources.
+   - *Technologie :* Framework Web (par exemple, Django, Flask).
+
+6. **Système de Gestion de Base de Données :**
+   - *Description :* Gère les opérations de lecture/écriture sur la base de données.
+   - *Technologie :* ORM (Object-Relational Mapping) associé à la base de données.
+
+## Relations et Connectivité :
+
+- L'**Application Web** est déployée sur le **Serveur Web** et communique avec la **Base de Données** pour accéder aux données.
+- Les **Dispositifs d'Accès** (utilisateurs) interagissent avec l'application à travers le réseau.
+- Les **Équipements Matériels** sont gérés par l'application et sont connectés au système.
+--------------------------------------------------------------------------------------------------------------------------------------
+# Estimation du Coût du Projet basée sur la Complexité des Cas d'Utilisation
+
+## Points de Complexité des Cas d'Utilisation :
+
+1. **Authentification (1 point) :**
+   - Cas d'utilisation simple, impliquant une seule étape d'authentification.
+
+2. **Gestion des Ressources (3 points) :**
+   - Cas d'utilisation modérément complexe, avec des opérations de création, modification et suppression.
+
+3. **Affectation des Ressources (2 points) :**
+   - Cas d'utilisation modéré, impliquant la gestion des affectations de ressources.
+
+4. **Signalement de Panne (3 points) :**
+   - Cas d'utilisation modérément complexe, avec des détails de panne, de date et de fréquence.
+
+5. **Intervention de Maintenance (4 points) :**
+   - Cas d'utilisation complexe, impliquant des actions de maintenance avancées.
+
+6. **Gestion des Appels d'Offre (4 points) :**
+   - Cas d'utilisation complexe, impliquant plusieurs étapes, de la soumission à la sélection du fournisseur.
+
+7. **Messagerie Interne (2 points) :**
+   - Cas d'utilisation modéré, impliquant des fonctionnalités de messagerie basiques.
+
+8. **Notifications Automatiques (2 points) :**
+   - Cas d'utilisation modéré, impliquant des mécanismes de notification.
+
+## Estimation du Coût :
+
+- **Coût par Point :** [Insérer votre coût par point ici, par exemple, 500 $ par point]
+  
+- **Estimation du Coût Total :**
+  - (1 point * Coût par Point) + (3 points * Coût par Point) + (2 points * Coût par Point) + (3 points * Coût par Point) + (4 points * Coût par Point) + (4 points * Coût par Point) + (2 points * Coût par Point) + (2 points * Coût par Point)
+
+## Notes :
+
+- Les points attribués peuvent varier en fonction de la méthodologie d'estimation choisie.
+- Le coût par point est généralement basé sur l'expérience passée de l'entreprise ou sur des références de l'industrie.
+- Les estimations peuvent être ajustées en fonction de la complexité spécifique de votre projet.
+---------------------------------------------------------------------------------------------------------------------------------------
+# Planification des Tâches/Ressources à l'aide du Diagramme de Gantt
+
+## Tâches Principales :
+
+1. **Analyse des Besoins (Semaine 1-2) :**
+   - Identifier les besoins spécifiques du projet.
+   - Impliquer les parties prenantes pour clarifier les exigences.
+
+2. **Conception du Système (Semaine 3-4) :**
+   - Élaborer l'architecture globale du système.
+   - Définir les relations entre les composants.
+
+3. **Développement de l'Application Web (Semaine 5-10) :**
+   - Mise en place de l'infrastructure web.
+   - Implémentation des fonctionnalités de base.
+
+4. **Intégration de la Base de Données (Semaine 11-12) :**
+   - Créer et intégrer la base de données.
+   - Assurer la connectivité avec l'application web.
+
+5. **Tests et Validation (Semaine 13-14) :**
+   - Effectuer des tests unitaires et d'intégration.
+   - Valider les fonctionnalités avec les utilisateurs finaux.
+
+6. **Déploiement (Semaine 15) :**
+   - Préparer le déploiement de l'application sur le serveur web.
+   - Effectuer des tests finaux avant la mise en production.
+
+## Ressources Impliquées :
+
+- **Équipe de Développement :**
+  - Affectée aux tâches de développement et d'intégration.
+  - Répartition des rôles pour la conception, le codage, les tests, etc.
+
+- **Responsable des Ressources :**
+  - Impliqué dans la gestion des ressources matérielles et humaines.
+  - Supervision de l'affectation des ressources aux départements.
+
+- **Service de Maintenance :**
+  - Disponible pour les interventions en cas de panne.
+  - Notification automatique pour les pannes critiques.
+
+## Diagramme de Gantt (Simplifié) :
+
+Semaine 1-2: Analyse des Besoins
+Semaine 3-4: Conception du Système
+Semaine 5-10: Développement de l'Application Web
+Semaine 11-12: Intégration de la Base de Données
+Semaine 13-14: Tests et Validation
+Semaine 15: Déploiement
+
+### Notes :
+
+- Les tâches peuvent se chevaucher dans le temps, selon les dépendances et la disponibilité des ressources.
+- Le diagramme de Gantt complet inclurait des détails supplémentaires, des sous-tâches, et des dépendances entre les tâches.
+_________________________________________________________________________________________________________________________________________________
