@@ -137,3 +137,46 @@
 - Date
 - Heure
 
+
+---------------------------------------------------------------------------------------------------------
+# Diagramme de Processus Métier
+
+![Diagramme de Processus Métier]
+
+## Explication des Activités :
+
+1. **Demande de Ressources :**
+   - Le chef de département soumet les besoins en ressources pour son département.
+
+2. **Collecte des Besoins :**
+   - Le responsable des ressources collecte les besoins de tous les départements.
+
+3. **Appel d'Offre :**
+   - Le responsable des ressources lance un appel d'offres en utilisant les besoins collectés.
+
+4. **Soumissions des Fournisseurs :**
+   - Les fournisseurs soumettent leurs offres en réponse à l'appel d'offres.
+
+5. **Sélection du Fournisseur :**
+   - Le responsable des ressources évalue les soumissions et sélectionne le fournisseur le moins disant.
+
+6. **Livraison des Ressources :**
+   - Le fournisseur livre les ressources conformément à l'offre sélectionnée.
+
+7. **Affectation des Ressources :**
+   - Le responsable des ressources affecte les ressources aux départements et aux utilisateurs spécifiques.
+
+8. **Signalement de Panne :**
+   - Les utilisateurs signalent les pannes au service de maintenance.
+
+9. **Intervention de Maintenance :**
+   - Le service de maintenance intervient pour résoudre les problèmes signalés.
+
+10. **Évaluation de Fournisseur :**
+    - Le responsable des ressources évalue la performance du fournisseur après la livraison.
+
+11. **Communication :**
+    - Les communications sont gérées entre les différents acteurs (responsable des ressources, service de maintenance, fournisseur, utilisateurs).
+
+12. **Génération de Rapports :**
+    - Le système génère des rapports périodiques sur l'état des ressources, les pannes, les évaluations des fournisseurs, etc.
