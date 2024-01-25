@@ -124,6 +124,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Materiel.cs" />
+    <Compile Include="Models\Compte.cs" />
+    <Compile Include="Models\Roles.cs" />
+    <Compile Include="Models\TypeOrderLogiciel.cs" />
+    <Compile Include="Models\FrequencePanne.cs" />
+    <Compile Include="Models\Date.cs" />
+    <Compile Include="Models\Fournisseur.cs" />
+    <Compile Include="Models\Imprimante.cs" />
+    <Compile Include="Models\Offre.cs" />
+    <Compile Include="Models\OrderPanne.cs" />
+    <Compile Include="Models\Ordinateur.cs" />
+    <Compile Include="Models\Panne.cs" />
+    <Compile Include="Models\ReponseOffre.cs" />
+    <Compile Include="Models\Ressource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -180,7 +194,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
