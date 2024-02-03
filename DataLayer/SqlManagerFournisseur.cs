@@ -1,58 +1,43 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace LogicielAspProject.DataLayer
 {
     public class SqlManagerFournisseur
     {
+        private readonly SqlConnection connection;
 
         public SqlManagerFournisseur()
         {
+            string connectionString = @"Server=35.203.77.255;Database=your_database_name;User Id=admin;Password=Admin1234;";
+            connection = new SqlConnection(connectionString);
+        }
 
-            SqlConnection connection = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
+        private void ExecuteNonQuery(string query, SqlParameter[] parameters = null)
+        {
+            SqlCommand cmd = new SqlCommand(query, connection);
 
-            connection.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;
-        AttachDbFilename=D:\source\repos\Esisa2024\4emeAnnee\SectionB\WebApplication5\WebApplication5\App_Data\webapplication5.mdf;";
-            if (connection.State == ConnectionState.Closed)
-                connection.Open();
-            cmd.Connection = connection;
-
-            public void AddFournisseur(Fournisseur fournisseur)
+            if (parameters != null)
             {
-                {
-                    cmd.CommandText = $@"insert into Fournisseur (username,password,role) 
-                values('{account.UserName}','{account.Password}','{account.Role}')";
-                    cmd.ExecuteNonQuery();
-                }
-
-                public void DeleteFournisseur(string id)
-                {
-                    cmd.CommandText = $@"select idstudent from accounts where username like '{id}';";
-                    int idStudent = (int)cmd.ExecuteScalar();
-                    cmd.CommandText = $@"delete from accounts where username like '{id}'";
-                    cmd.ExecuteNonQuery();
-                    cmd.CommandText = $@"delete from student where id like {idStudent}";
-                    cmd.ExecuteNonQuery();
-                }
-                public void UpdateFournisseur(string id, Fournisseur fournisseur)
-                {
-                    cmd.CommandText = $@"update accounts set password='{account.Password}',
-                                role='{account.Role}'
-                                where username like '{id}'";
-                    cmd.ExecuteNonQuery();
-                    cmd.CommandText = $@"update student set name='{account.Student.Name}',
-                                        firstname='{account.Student.FirstName}',
-                                        email='{account.Student.Email}',
-                                        phone='{account.Student.Phone}'
-                                where id= {account.Student.Id}";
-                    cmd.ExecuteNonQuery();
-
-                }
-
+                cmd.Parameters.AddRange(parameters);
             }
 
+            try
+            {
+                connection.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
+
+        
     }
+}
