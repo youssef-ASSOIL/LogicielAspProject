@@ -11,6 +11,8 @@ namespace LogicielAspProject.Models
         public string Password { get; set; } // Password should also be a string and stored securely
         public Roles Role { get; set; }
 
+        public int idCompte {  get; set; } 
+
         // Constructors, methods, and other functionality would be added here.
         // Ensure to hash and salt the password rather than storing it in plain text.
     }

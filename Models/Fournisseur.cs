@@ -7,12 +7,14 @@ namespace LogicielAspProject.Models
 {
     public class Fournisseur
     {
-        private string adresse { get; set; }
-        private string email { get; set; }
-        private List<Offre> offres { get; set; } // Assuming 'Offre' is a defined class elsewhere
-        private string nom { get; set; }
-        private string telephone { get; set; }
-
+        public string adresse { get; set; }
+        public string email { get; set; }
+        public List<Offre> offres { get; set; } // Assuming 'Offre' is a defined class elsewhere
+        public string nomSociete { get; set; }
+        public string telephone { get; set; }
+        public string gerant { get; set; }
+        public int idFournisseur{ get; set; }
+        public Compte compte { get; set; }
         public Fournisseur()
         {
             offres = new List<Offre>();
