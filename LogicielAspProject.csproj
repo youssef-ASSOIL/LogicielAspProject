@@ -163,15 +163,18 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PanneManagerController.cs" />
     <Compile Include="Data\Database.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Frequence.cs" />
+    <Compile Include="Models\TypePanne.cs" />
+    <Compile Include="Models\Decision.cs" />
     <Compile Include="Models\Materiel.cs" />
     <Compile Include="Models\Compte.cs" />
     <Compile Include="Models\Roles.cs" />
     <Compile Include="Models\TypeOrderLogiciel.cs" />
-    <Compile Include="Models\FrequencePanne.cs" />
     <Compile Include="Models\Date.cs" />
     <Compile Include="Models\Fournisseur.cs" />
     <Compile Include="Models\Imprimante.cs" />
@@ -234,9 +237,13 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\PanneManager\Create.cshtml" />
+    <Content Include="Views\PanneManager\Delete.cshtml" />
+    <Content Include="Views\PanneManager\AllPanne.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\PanneViews\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

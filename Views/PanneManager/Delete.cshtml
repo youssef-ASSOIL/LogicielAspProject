@@ -1,0 +1,80 @@
+﻿@model LogicielAspProject.Models.Panne
+
+@{
+    ViewBag.Title = "Delete Panne";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Delete Panne</h3>
+        </div>
+        <div class="card-body">
+            <div class="form-horizontal">
+                <h4>Panne</h4>
+                <hr />
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">DatePanne</label>
+                    <div class="col-md-10">
+                        @Html.DisplayFor(model => model.DatePanne, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">Constat</label>
+                    <div class="col-md-10">
+                        @Html.DisplayFor(model => model.Constat, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">Explication</label>
+                    <div class="col-md-10">
+                        @Html.DisplayFor(model => model.Explication, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">RessourceID</label>
+                    <div class="col-md-10">
+                        @Html.DisplayFor(model => model.RessourceID, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">TypePanne</label>
+                    <div class="col-md-10">
+                        @Html.DisplayFor(model => model.TypePanne, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">Decision</label>
+                    <div class="col-md-10">
+                        @Html.DisplayFor(model => model.Decision, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">Frequence</label>
+                    <div class="col-md-10">
+                        @Html.DisplayFor(model => model.Frequence, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        @using (Html.BeginForm("Delete", "PanneViews", FormMethod.Post))
+                        {
+                            @Html.HiddenFor(model => model.IdPanne)
+                            <input type="submit" value="Delete" class="btn btn-danger" />
+                            @Html.ActionLink("Cancel", "Index", null, new { @class = "btn btn-secondary" })
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

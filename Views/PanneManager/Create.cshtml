@@ -1,0 +1,79 @@
+﻿@model LogicielAspProject.Models.Panne
+
+@{
+    ViewBag.Title = "Create Panne";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            <h2>Create New Panne</h2>
+        </div>
+        <div class="card-body">
+            @using (Html.BeginForm("Create", "PanneViews", FormMethod.Post, new { @class = "needs-validation", novalidate = "novalidate" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="row">
+                    <!-- Column 1 -->
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            @Html.LabelFor(model => model.DatePanne)
+                            @Html.EditorFor(model => model.DatePanne, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.DatePanne, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="mb-3">
+                            @Html.LabelFor(model => model.Constat)
+                            @Html.EditorFor(model => model.Constat, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Constat, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="mb-3">
+                            @Html.LabelFor(model => model.Explication)
+                            @Html.EditorFor(model => model.Explication, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Explication, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            @Html.LabelFor(model => model.RessourceID)
+                            @Html.EditorFor(model => model.RessourceID, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.RessourceID, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="mb-3">
+                            @Html.LabelFor(model => model.TypePanne)
+                            @Html.DropDownListFor(model => model.TypePanne, new SelectList(Enum.GetValues(typeof(LogicielAspProject.Models.TypePanne))), "Select Type", new { @class = "form-select" })
+                            @Html.ValidationMessageFor(model => model.TypePanne, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="mb-3">
+                            @Html.LabelFor(model => model.Decision)
+                            @Html.DropDownListFor(model => model.Decision, new SelectList(Enum.GetValues(typeof(LogicielAspProject.Models.Decision))), "Select Decision", new { @class = "form-select" })
+                            @Html.ValidationMessageFor(model => model.Decision, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="mb-3">
+                            @Html.LabelFor(model => model.Frequence)
+                            @Html.DropDownListFor(model => model.Frequence, new SelectList(Enum.GetValues(typeof(LogicielAspProject.Models.Frequence))), "Select Frequency", new { @class = "form-select" })
+                            @Html.ValidationMessageFor(model => model.Frequence, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-grid gap-2">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-secondary" })
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

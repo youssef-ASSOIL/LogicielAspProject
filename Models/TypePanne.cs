@@ -5,11 +5,10 @@ using System.Web;
 
 namespace LogicielAspProject.Models
 {
-    public enum FrequencePanne
+    public enum TypePanne
     {
-        Litteraux,
-        Rare,
-        Frequente,
-        Permanente
+        Logiciel,
+        Materiel
+        // other types...
     }
 }

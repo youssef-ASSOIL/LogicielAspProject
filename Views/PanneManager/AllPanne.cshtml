@@ -1,0 +1,46 @@
+﻿@model List<LogicielAspProject.Models.Panne>
+
+@{
+    ViewBag.Title = "List of Pannes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <h2>List of Pannes</h2>
+
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>Date Panne</th>
+            <th>Constat</th>
+            <th>Explication</th>
+            <th>Ressource ID</th>
+            <th>Type Panne</th>
+            <th>Decision</th>
+            <th>Frequence</th>
+            <th>Action</th>
+        </tr>
+        @foreach (var panne in Model)
+        {
+            <tr>
+                <td>@panne.IdPanne</td>
+                <td>@panne.DatePanne</td>
+                <td>@panne.Constat</td>
+                <td>@panne.Explication</td>
+                <td>@panne.RessourceID</td>
+                <td>@panne.TypePanne</td>
+                <td>@panne.Decision</td>
+                <td>@panne.Frequence</td>
+                <td>
+                    @Html.ActionLink("Details", "Details", new { id = panne.IdPanne }, new { @class = "btn btn-info" })
+                    @Html.ActionLink("Edit", "Edit", new { id = panne.IdPanne }, new { @class = "btn btn-warning" })
+                    @Html.ActionLink("Delete", "Delete", new { id = panne.IdPanne }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+    </table>
+
+    <p>
+        @Html.ActionLink("Create New Panne", "Create", null, new { @class = "btn btn-success" })
+    </p>
+</div>
