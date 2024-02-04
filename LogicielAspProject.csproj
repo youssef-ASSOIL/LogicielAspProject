@@ -172,17 +172,24 @@
     <Compile Include="App_Start\BundleConfig2.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="BuisnessLayer\EnseignantManager.cs" />
     <Compile Include="BuisnessLayer\FournisseurManager.cs" />
+    <Compile Include="BuisnessLayer\IEnseignantManager.cs" />
     <Compile Include="BuisnessLayer\IFournisseurManager.cs" />
+    <Compile Include="Controllers\EnseignantController.cs" />
     <Compile Include="Controllers\FournisseurController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DataLayer\DatabaseConnection.cs" />
+    <Compile Include="DataLayer\SqlManagerEnseignant.cs" />
     <Compile Include="DataLayer\SqlManagerFournisseur.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Administratif.cs" />
+    <Compile Include="Models\Enseignant.cs" />
     <Compile Include="Models\Materiel.cs" />
     <Compile Include="Models\Compte.cs" />
+    <Compile Include="Models\PersonneDepartement.cs" />
     <Compile Include="Models\Roles.cs" />
     <Compile Include="Models\TypeOrderLogiciel.cs" />
     <Compile Include="Models\FrequencePanne.cs" />
@@ -252,6 +259,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Data\" />
+    <Folder Include="Views\Enseignant\" />
     <Folder Include="Views\Fournisseur\" />
   </ItemGroup>
   <ItemGroup>
