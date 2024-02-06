@@ -14,7 +14,7 @@ namespace LogicielAspProject.BuisnessLayer
 
         public bool AddFournisseur(Fournisseur fournisseur, Compte compte)
             {
-
+                
                 db.AddFournisseur(fournisseur,  compte.idCompte);
                 return true;
 

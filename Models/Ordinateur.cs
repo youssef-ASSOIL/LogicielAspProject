@@ -5,7 +5,7 @@ using System.Web;
 
 namespace LogicielAspProject.Models
 {
-    public class Ordinateur
+    public class Ordinateur : Resource
     {
         public int CPU { get; set; }
         public int DisqueDur { get; set; }

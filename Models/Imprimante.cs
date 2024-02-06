@@ -5,7 +5,7 @@ using System.Web;
 
 namespace LogicielAspProject.Models
 {
-    public class Imprimante
+    public class Imprimante :Resource
     {
         public int Marque { get; set; }
         public int Resolution { get; set; }

@@ -37,8 +37,16 @@ namespace LogicielAspProject.Controllers
         {
             try
             {
+                Compte compte = new Compte
+                {
+                    Username = "test1",
+                    Password = "test1",
+                    Role = "Enseignant",
+                    idCompte = 30
+                };
                 // TODO: Add insert logic here
-                manager.AddEnseignant(enseignant, Session["account"] as Compte);
+              //  manager.AddEnseignant(enseignant, Session["compte"] as Compte);
+                manager.AddEnseignant(enseignant, compte);
 
                 return RedirectToAction("Index");
             }

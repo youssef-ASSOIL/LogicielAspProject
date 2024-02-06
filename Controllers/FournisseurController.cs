@@ -10,7 +10,6 @@ using LogicielAspProject.Models;
 
 namespace LogicielAspProject.Controllers
 {
-    [Authorize]
     public class FournisseurController : Controller
     {
 
@@ -40,8 +39,16 @@ namespace LogicielAspProject.Controllers
         {
             try
             {
+                Compte compte = new Compte
+                {
+                    Username = "admin",
+                    Password = "admin",
+                    Role="Responsable",
+                    idCompte=7
+                };
                 // TODO: Add insert logic here
-                manager.AddFournisseur(fournisseur, Session["account"] as Compte);
+                // manager.AddFournisseur(fournisseur, Session["compte"] as Compte);
+                manager.AddFournisseur(fournisseur, compte);
                 return RedirectToAction("Index");
             }
             catch

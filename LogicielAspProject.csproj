@@ -172,20 +172,26 @@
     <Compile Include="App_Start\BundleConfig2.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="BuisnessLayer\AccountManager.cs" />
     <Compile Include="BuisnessLayer\EnseignantManager.cs" />
     <Compile Include="BuisnessLayer\FournisseurManager.cs" />
+    <Compile Include="BuisnessLayer\IAccountManager.cs" />
     <Compile Include="BuisnessLayer\IEnseignantManager.cs" />
     <Compile Include="BuisnessLayer\IFournisseurManager.cs" />
+    <Compile Include="Controllers\CompteController.cs" />
     <Compile Include="Controllers\EnseignantController.cs" />
     <Compile Include="Controllers\FournisseurController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DataLayer\DatabaseConnection.cs" />
+    <Compile Include="DataLayer\IAccountDataManager.cs" />
+    <Compile Include="DataLayer\SqlAccountsDataManager.cs" />
     <Compile Include="DataLayer\SqlManagerEnseignant.cs" />
     <Compile Include="DataLayer\SqlManagerFournisseur.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Administratif.cs" />
+    <Compile Include="Models\CompteFournisseurViewModel.cs" />
     <Compile Include="Models\Enseignant.cs" />
     <Compile Include="Models\Materiel.cs" />
     <Compile Include="Models\Compte.cs" />
@@ -255,12 +261,17 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Fournisseur\Create.cshtml" />
+    <Content Include="Views\Fournisseur\Edit.cshtml" />
+    <Content Include="Views\Fournisseur\Delete.cshtml" />
+    <Content Include="Views\Enseignant\Create.cshtml" />
+    <Content Include="Views\Enseignant\Edit.cshtml" />
+    <Content Include="Views\Enseignant\Delete.cshtml" />
+    <Content Include="Views\Compte\signup.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Data\" />
-    <Folder Include="Views\Enseignant\" />
-    <Folder Include="Views\Fournisseur\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
